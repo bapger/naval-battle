@@ -175,11 +175,11 @@ void display_plate(Plate* current_plate,int who){
     }
     int n=current_plate->length;
     int temp_case=0;
-    printf("x |");
+    printf("  |");
     for(int j=0;j<n;j++){
         printf(" %d",j);
     }
-    printf("\n");
+    printf(" x\n");
     for(int i=0; i<n; i++){
         printf("%d | ",i);
         for(int j=0;j<n;j++){
@@ -208,6 +208,7 @@ void display_plate(Plate* current_plate,int who){
         }
         printf("\n");
     }
+    printf("y |\n");
 }
 
 /**
@@ -225,7 +226,9 @@ void player_round(Game* current_game,int side){
     int y=0;
     
     do{ 
+        printf("x coord:");
         scanf("%d",&y);
+        printf("\ny coord:");
         scanf("%d",&x);
     }while(x>=side||y>=side);
     system("clear");

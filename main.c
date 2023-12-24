@@ -39,7 +39,7 @@ void main() {
         printf("Your navy\n");
         display_plate(current_game->j1, 0);
         printf("Enemy fleet\n");
-        display_plate(current_game->j2, 1);
+        display_plate(current_game->j2, 0);
 
         int player_destroyed = 0;    // Count of player's destroyed ships
         int npc_destroyed = 0;       // Count of computer's destroyed ships

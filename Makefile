@@ -9,6 +9,7 @@ all : exec
 
 exec : $(OBJ)
 	$(CC) -fsanitize=address $^ -o $@
+	doxygen Doxyfile
 
 debug:
 	@echo $(SRC)
@@ -17,6 +18,8 @@ debug:
 clean : 
 	rm -f *.o
 	rm -f exec
+	rm -r html/
+	rm -r latex/
 
 doxygen	:
 	xdg-open html/index.html
